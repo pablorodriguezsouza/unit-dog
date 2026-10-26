@@ -1,8 +1,8 @@
-import { beforeEach, describe, expect, test } from "@jest/globals";
-import Dog from "./dog.js";
+import { beforeEach, describe, expect, test } from "vitest";
+import { Dog } from "../domain/Dog";
 
 describe("Dog class tests", () => {
-  let dog;
+  let dog: Dog;
 
   beforeEach(() => {
     dog = new Dog("Buddy", "Golden Retriever", 2, "Golden");
