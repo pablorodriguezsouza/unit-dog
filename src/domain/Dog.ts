@@ -35,8 +35,7 @@ export class Dog {
    * @return The description of a dog.
    */
   getDescription(): string {
-    // TODO: retornar la concatenación de this.name y this.breed
-    return "";
+    return `${this.name} is a ${this.breed}.`;
   }
 
   /**
@@ -45,8 +44,8 @@ export class Dog {
    * @return A message indicating that the dog is now sleeping.
    */
   sleep(): string {
-    // TODO: leer el jsdoc
-    return "";
+    this.isSleeping = true;
+    return `${this.name} is now sleeping.`;
   }
 
   /**
@@ -55,8 +54,8 @@ export class Dog {
    * @return A message indicating that the dog woke up.
    */
   wakeUp(): string {
-    // TODO: leer el jsdoc
-    return "";
+    this.isSleeping = false;
+    return `${this.name} woke up.`;
   }
 
   /**
@@ -66,7 +65,7 @@ export class Dog {
    * @return A message indicating that the dog learned a new trick.
    */
   learnTrick(trick: string): string {
-    if (trick == null || trick == "") {
+    if (trick === null || trick === "") {
       throw new Error("Trick cannot be empty");
     }
     this.tricks.push(trick);
@@ -79,8 +78,7 @@ export class Dog {
    * @return A message indicating "Woof! Woof!".
    */
   bark(): string {
-    // TODO: leer el jsdoc
-    return "";
+    return "Woof! Woof!";
   }
 
   /**
@@ -89,7 +87,6 @@ export class Dog {
    * @return All the information about the dog.
    */
   displayInfo(): string {
-    // TODO: leer el jsdoc
-    return "";
+    return `Name: ${this.name}, Breed: ${this.breed}, Age: ${this.age}, Color: ${this.color}, Sleeping: ${this.isSleeping}, Tricks: ${this.tricks.join(", ")}`;
   }
 }
